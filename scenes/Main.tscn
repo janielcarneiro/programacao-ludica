@@ -221,7 +221,6 @@ grow_vertical = 2
 text = "Ola"
 
 [node name="Tela_Informacao" type="ColorRect" parent="Control"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -334,5 +333,108 @@ theme_override_font_sizes/font_size = 21
 text = "INICIAR"
 flat = true
 
+[node name="Jogo" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.027451, 0.141176, 0.211765, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Control/Jogo"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 130.0
+grow_horizontal = 2
+color = Color(0.109804, 0.313726, 0.321569, 1)
+
+[node name="Label" type="Label" parent="Control/Jogo/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 27
+text = "       Nivel: 1
+       Pontuação: 0"
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Control/Jogo"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -309.0
+offset_bottom = -252.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Problema: Este código imprime os números de 1 a 10?"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Control/Jogo"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -173.0
+offset_bottom = -123.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 36
+text = "               Código:"
+horizontal_alignment = 3
+justification_flags = 35
+
+[node name="ColorRect2" type="ColorRect" parent="Control/Jogo"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.0
+offset_top = -110.0
+offset_right = 196.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.109804, 0.313726, 0.321569, 1)
+
+[node name="Label" type="Label" parent="Control/Jogo/ColorRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "for i in range(1, 11):
+     print(i)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Control/Jogo"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -216.0
+offset_top = -416.0
+offset_right = -15.0
+offset_bottom = -386.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 21
+text = "Esta afirmação está:"
+
 [connection signal="pressed" from="Control/VBoxContainer/ColorRect/VBoxContainer/ColorRect/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/ColorRect/ColorRect3/Button" to="." method="_on_button_nome_pressed"]
+[connection signal="pressed" from="Control/Tela_Informacao/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]

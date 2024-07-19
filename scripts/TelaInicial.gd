@@ -8,12 +8,16 @@ extends Node
 
 @onready var Tela_Informacao: ColorRect = $Control/Tela_Informacao
 @onready var mostrar_nome: Label = $Control/Tela_Informacao/Label
+@onready var Iniciar_Jogo: Button = $Control/Tela_Informacao/ColorRect3/Button
+
+@onready var Jogo: ColorRect = $Control/Jogo
 
 func _ready():
 	var img_texture = preload("res://imgs/Nilsin.png")
 	texture_rect.texture = img_texture
 	Tela_Pegar_Nome.hide()
 	Tela_Informacao.hide()
+	Jogo.hide()
 
 #Botão Iniciar
 func _on_button_pressed():
@@ -29,3 +33,9 @@ func _on_button_nome_pressed():
 	Tela_Informacao.show()
 	pass # Replace with function body.
 
+
+#Essa parte vai Iniciar o jogo
+func _on_button_iniciar_jogo_pressed():
+	print("Botão iniciar")
+	Jogo.show()
+	pass # Replace with function body.
