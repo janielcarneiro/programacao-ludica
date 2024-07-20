@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://ck0rw6xqv6i4k"]
+
+[ext_resource type="Script" path="res://scripts/resourses/question.gd" id="1_f4n1o"]
+
+[resource]
+script = ExtResource("1_f4n1o")
+question_info = " Este código imprime todos os números impares de 1 a 20?"
+question_script = "for i in range(1, 21):    if i % 2 != 0:        print(i)"
+type = 0
+options = Array[String](["Certo", "Errado"])
+correct = "Certo"
