@@ -6,6 +6,8 @@
 script = ExtResource("1_vrekk")
 question_info = "Problema: Este código imprime os números de 1 a 10?"
 question_script = "for i in range(1, 11):     print(i)"
+Nivel = "Nivel: 01"
+Questao = "Questão:  1/3"
 type = 0
 options = Array[String](["Certo", "Errado"])
-correct = "Certo "
+correct = "Certo"

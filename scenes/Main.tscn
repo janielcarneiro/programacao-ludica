@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://df1ahxmgj37y2"]
+[gd_scene load_steps=5 format=3 uid="uid://df1ahxmgj37y2"]
 
 [ext_resource type="Script" path="res://scripts/TelaInicial.gd" id="1_jhv75"]
 [ext_resource type="Resource" uid="uid://cmgr2p7euw6s2" path="res://resources/varied/theme/Tema_Variado.tres" id="2_fa0kv"]
+[ext_resource type="AudioStream" uid="uid://dxgc5ufxgd86p" path="res://sounds/correct.ogg" id="3_rj8xm"]
+[ext_resource type="AudioStream" uid="uid://b10krkw44jqlx" path="res://sounds/incorrect.ogg" id="4_0f32i"]
 
 [node name="Main" type="CanvasLayer"]
 script = ExtResource("1_jhv75")
 quiz = ExtResource("2_fa0kv")
+color_right = Color(0, 0.917792, 0, 1)
+color_wrong = Color(0.999684, 0.160299, 0.115712, 1)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -352,17 +356,24 @@ offset_bottom = 130.0
 grow_horizontal = 2
 color = Color(0.109804, 0.313726, 0.321569, 1)
 
-[node name="Label" type="Label" parent="Control/Jogo/ColorRect"]
+[node name="Label2" type="Label" parent="Control/Jogo/ColorRect"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -18.5
+offset_right = 166.0
+offset_bottom = 18.5
 grow_vertical = 2
 theme_override_font_sizes/font_size = 27
-text = "       Nivel: 1
-       Pontuação: 0"
-vertical_alignment = 1
+text = "Questão: 1/3"
+
+[node name="Label" type="Label" parent="Control/Jogo/ColorRect"]
+layout_mode = 1
+offset_right = 111.0
+offset_bottom = 37.0
+theme_override_font_sizes/font_size = 27
+text = "Nivel: 01"
 
 [node name="Label" type="Label" parent="Control/Jogo"]
 layout_mode = 1
@@ -377,6 +388,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 25
 text = "Problema: Este código imprime os números de 1 a 10?"
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="Control/Jogo"]
 layout_mode = 1
@@ -408,7 +420,14 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.109804, 0.313726, 0.321569, 1)
 
-[node name="Label" type="Label" parent="Control/Jogo/ColorRect2"]
+[node name="TextureRect" type="TextureRect" parent="Control/Jogo/ColorRect2"]
+layout_mode = 0
+offset_right = 420.0
+offset_bottom = 306.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Control/Jogo/ColorRect2/TextureRect"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -420,6 +439,7 @@ text = "for i in range(1, 11):
      print(i)"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Label3" type="Label" parent="Control/Jogo"]
 layout_mode = 1
@@ -458,6 +478,12 @@ text = "Certo"
 [node name="Button2" type="Button" parent="Control/Jogo/VBoxContainer"]
 layout_mode = 2
 text = "Errado"
+
+[node name="Correto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_rj8xm")
+
+[node name="Incorreto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0f32i")
 
 [connection signal="pressed" from="Control/VBoxContainer/ColorRect/VBoxContainer/ColorRect/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/ColorRect/ColorRect3/Button" to="." method="_on_button_nome_pressed"]

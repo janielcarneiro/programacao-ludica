@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://bvpoph0els0a8"]
+
+[ext_resource type="Script" path="res://scripts/resourses/question.gd" id="1_wpqux"]
+
+[resource]
+script = ExtResource("1_wpqux")
+question_info = "Tá funcionando Corretamenta"
+question_script = "Chupa meu ovo"
+Nivel = "Nivel: 02"
+Questao = "Questão: 1/3"
+type = 0
+options = Array[String](["Certo", "Errado"])
+correct = "Certo"

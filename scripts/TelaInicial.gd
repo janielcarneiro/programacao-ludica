@@ -5,8 +5,12 @@ extends Node
 @export var color_wrong: Color
 
 var buttons: Array[Button]
-var index: int = 1
+var index: int 
 var correct: int
+
+#retornar valor do meu index
+var current_quiz: QuizQuestion:
+	get: return quiz.theme[index]
 
 @onready var texture_rect: TextureRect = $Control/VBoxContainer/ColorRect/Panel/TextureRect
 @onready var Button_Iniciar: Button = $Control/VBoxContainer/ColorRect/VBoxContainer/ColorRect/Button
@@ -20,7 +24,7 @@ var correct: int
 
 @onready var Jogo: ColorRect = $Control/Jogo
 @onready var descricao: Label = $Control/Jogo/Label
-@onready var descricao_scr: Label = $Control/Jogo/ColorRect2/Label
+@onready var descricao_scr: Label = $Control/Jogo/ColorRect2/TextureRect/Label
 
 func _ready():
 	var img_texture = preload("res://imgs/Nilsin.png")
@@ -35,15 +39,38 @@ func _ready():
 	load_quiz()
 	
 	
-#carregar as perguntas
+#carregar as perguntas é
 func load_quiz() -> void:
-	descricao.text = quiz.theme[index].question_info
-	descricao_scr.text = quiz.theme[index].question_script
+	if index >= quiz.theme.size():
+		_game_over()
+		return
+		
+	descricao.text = current_quiz.question_info
+	descricao_scr.text = current_quiz.question_script
+	$Control/Jogo/ColorRect/Label.text = current_quiz.Nivel
+	$Control/Jogo/ColorRect/Label2.text = current_quiz.Questao
+	
 	
 	#Para Adicionar valores dentro do botão
-	var options = quiz.theme[index].options
+	var options = current_quiz.options
 	for i in buttons.size():
 		buttons[i].text = options[i]
+		#Pegar valores do botão
+		buttons[i].pressed.connect(_buttons_answer.bind(buttons[i]))
+		
+		
+#Pegar valores do botão e adicionar logicar ao clocar
+func _buttons_answer(button) -> void:
+	if current_quiz.correct == button.text:
+		button.modulate = color_right
+		$Correto.play()
+	else:
+		button.modulate = color_wrong
+		$Incorreto.play()
+	_next_question()
+	
+	print(button.text)
+	
 #Botão Iniciar
 func _on_button_pressed():
 	print("cliquei no botão")
@@ -64,3 +91,20 @@ func _on_button_iniciar_jogo_pressed():
 	print("Botão iniciar")
 	Jogo.show()
 	pass # Replace with function body.
+
+#Passar para proxima quetaão
+func _next_question() -> void:
+	#desconectar todos os botão
+	for bt in buttons:
+		bt.pressed.disconnect(_buttons_answer)
+		
+	await  get_tree().create_timer(1).timeout
+	for bt in buttons:
+		bt.modulate = Color.WHITE
+		
+	index += 1
+	
+	load_quiz()
+	
+func _game_over() -> void:
+	print("ACABOU SE TODAS AS PERGUNTAS")

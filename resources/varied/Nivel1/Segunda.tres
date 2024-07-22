@@ -6,6 +6,8 @@
 script = ExtResource("1_wp3hx")
 question_info = "Problema: Este código imprime todos os números pares de 1 a 20?"
 question_script = "for i in range(1, 21):     if i % 2 == 0:         print(i)"
+Nivel = "Nivel: 01"
+Questao = "Questão: 2/3"
 type = 0
 options = Array[String](["Certo", "Errado"])
 correct = "Certo"
