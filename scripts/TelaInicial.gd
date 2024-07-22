@@ -26,12 +26,16 @@ var current_quiz: QuizQuestion:
 @onready var descricao: Label = $Control/Jogo/Label
 @onready var descricao_scr: Label = $Control/Jogo/ColorRect2/TextureRect/Label
 
+@onready var Game_Over: ColorRect = $Control/Game_Over
+@onready var descFinal: Label = $Control/Game_Over/Desc
 func _ready():
+	correct = 0
 	var img_texture = preload("res://imgs/Nilsin.png")
 	texture_rect.texture = img_texture
 	Tela_Pegar_Nome.hide()
 	Tela_Informacao.hide()
 	Jogo.hide()
+	Game_Over.hide()
 	
 	#Adicionar botão dentro do vetor
 	for button in $Control/Jogo/VBoxContainer.get_children():
@@ -63,6 +67,7 @@ func load_quiz() -> void:
 func _buttons_answer(button) -> void:
 	if current_quiz.correct == button.text:
 		button.modulate = color_right
+		correct +=1
 		$Correto.play()
 	else:
 		button.modulate = color_wrong
@@ -107,4 +112,7 @@ func _next_question() -> void:
 	load_quiz()
 	
 func _game_over() -> void:
+	Game_Over.show()
+	descFinal.text = Nome.text + " Sua Pontuação foi de: "
+	$Control/Game_Over/Score.text = str(correct, "/", quiz.theme.size())
 	print("ACABOU SE TODAS AS PERGUNTAS")

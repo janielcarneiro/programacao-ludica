@@ -479,6 +479,47 @@ text = "Certo"
 layout_mode = 2
 text = "Errado"
 
+[node name="Game_Over" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.109804, 0.313726, 0.321569, 1)
+
+[node name="Desc" type="Label" parent="Control/Game_Over"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.0
+offset_top = -27.0
+offset_right = 129.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 39
+text = "Você Acertou:"
+
+[node name="Score" type="Label" parent="Control/Game_Over"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.0
+offset_top = 86.0
+offset_right = 29.0
+offset_bottom = 155.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "0/0"
+
 [node name="Correto" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_rj8xm")
 
