@@ -28,9 +28,12 @@ var current_quiz: QuizQuestion:
 
 @onready var Game_Over: ColorRect = $Control/Game_Over
 @onready var descFinal: Label = $Control/Game_Over/Desc
+
+
+
 func _ready():
 	correct = 0
-	var img_texture = preload("res://imgs/Nilsin.png")
+	var img_texture = preload("res://imgs/TelaInicial.jpg")
 	texture_rect.texture = img_texture
 	Tela_Pegar_Nome.hide()
 	Tela_Informacao.hide()
@@ -38,7 +41,7 @@ func _ready():
 	Game_Over.hide()
 	
 	#Adicionar botão dentro do vetor
-	for button in $Control/Jogo/VBoxContainer.get_children():
+	for button in $Control/Jogo/HBoxContainer.get_children():
 		buttons.append(button)
 	load_quiz()
 	

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://df1ahxmgj37y2"]
+[gd_scene load_steps=6 format=3 uid="uid://df1ahxmgj37y2"]
 
 [ext_resource type="Script" path="res://scripts/TelaInicial.gd" id="1_jhv75"]
 [ext_resource type="Resource" uid="uid://cmgr2p7euw6s2" path="res://resources/varied/theme/Tema_Variado.tres" id="2_fa0kv"]
+[ext_resource type="FontFile" uid="uid://brydv46tk0fd3" path="res://resources/Fonts/04B_11__.TTF" id="3_1c0l5"]
 [ext_resource type="AudioStream" uid="uid://dxgc5ufxgd86p" path="res://sounds/correct.ogg" id="3_rj8xm"]
 [ext_resource type="AudioStream" uid="uid://b10krkw44jqlx" path="res://sounds/incorrect.ogg" id="4_0f32i"]
 
@@ -35,41 +36,52 @@ color = Color(0.027451, 0.141176, 0.211765, 1)
 
 [node name="Label" type="Label" parent="Control/VBoxContainer/ColorRect"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -244.0
-offset_top = 110.0
-offset_right = 241.0
-offset_bottom = 329.0
+anchors_preset = -1
+anchor_left = 0.164
+anchor_top = 0.147
+anchor_right = 0.837
+anchor_bottom = 0.288
+offset_left = 2.92
+offset_top = -146.806
+offset_right = 3.35999
+offset_bottom = -44.824
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 40
-text = "               Bem vindo 
-                      ao 
-        Programação Lúdica"
+theme_override_colors/font_color = Color(0.996078, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 34
+text = "       Bem vindo
+            ao 
+Programação Lúdica"
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="Panel" type="Panel" parent="Control/VBoxContainer/ColorRect"]
 custom_minimum_size = Vector2(400, 400)
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = -200.0
-offset_right = 200.0
-offset_bottom = 200.0
+anchor_top = 0.446
+anchor_right = 0.502
+anchor_bottom = 0.446
+offset_left = -244.0
+offset_top = -243.908
+offset_right = 245.56
+offset_bottom = 245.092
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/ColorRect/Panel"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 1.016
 anchor_bottom = 1.0
-offset_right = 2.0
-offset_bottom = 4.0
+offset_left = -253.5
+offset_top = -250.5
+offset_right = 0.143982
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 1
@@ -83,10 +95,10 @@ anchor_left = 0.5
 anchor_top = 0.969
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -78.0
-offset_top = -284.32
-offset_right = 80.0
-offset_bottom = -250.0
+offset_left = -101.0
+offset_top = -373.762
+offset_right = 99.0
+offset_bottom = -354.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -97,12 +109,18 @@ color = Color(0.109804, 0.313726, 0.321569, 1)
 
 [node name="Button" type="Button" parent="Control/VBoxContainer/ColorRect/VBoxContainer/ColorRect"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_top = -5.9
+anchor_right = 0.52
+anchor_bottom = -3.1
+offset_left = 4.0
+offset_top = 352.0
+offset_right = 100.0
+offset_bottom = 244.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 27
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
 text = "INICIAR"
 flat = true
 
@@ -118,101 +136,117 @@ color = Color(0.027451, 0.141176, 0.211765, 1)
 [node name="ColorRect" type="ColorRect" parent="Control/ColorRect"]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
+anchors_preset = -1
+anchor_right = 0.997222
+anchor_bottom = 0.115562
 grow_horizontal = 2
 color = Color(0.109804, 0.313726, 0.321569, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Control/ColorRect/ColorRect"]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.533
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -147.0
-offset_top = -21.0
-offset_right = 147.0
-offset_bottom = 21.0
+anchor_bottom = 0.533
+offset_left = -294.0
+offset_top = -37.95
+offset_right = 298.0
+offset_bottom = 31.05
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 46
-text = "Programção Ludica"
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 42
+text = "Programação Lúdica"
 
 [node name="LineEdit" type="LineEdit" parent="Control/ColorRect"]
 custom_minimum_size = Vector2(200, 80)
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchors_preset = -1
+anchor_left = 0.096
+anchor_top = 0.5
+anchor_right = 0.91
 anchor_bottom = 1.0
-offset_left = -186.0
-offset_top = -544.0
-offset_right = 204.0
-offset_bottom = -464.0
+offset_left = -0.120003
+offset_top = 103.0
+offset_right = 0.799988
+offset_bottom = -466.0
 grow_horizontal = 2
 grow_vertical = 0
-placeholder_text = "escreva seu nome"
-alignment = 1
+theme_override_colors/font_placeholder_color = Color(1, 1, 0.988235, 1)
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+placeholder_text = "Digite seu nome aqui..."
 
 [node name="Label" type="Label" parent="Control/ColorRect"]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 0.506
 anchor_bottom = 0.5
 offset_left = -156.0
 offset_top = 27.0
-offset_right = 165.0
+offset_right = 160.68
 offset_bottom = 66.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 28
-text = "É Você qual o seu Nome"
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 30
+text = "E você qual o seu nome?"
 
 [node name="ColorRect2" type="ColorRect" parent="Control/ColorRect"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = -1
+anchor_left = 0.09
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 0.908
 anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = -413.0
-offset_right = 200.0
-offset_bottom = -197.0
+offset_left = 8.2
+offset_top = -403.0
+offset_right = 0.23999
+offset_bottom = -64.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.109804, 0.313726, 0.321569, 1)
+color = Color(100, 100, 100, 1)
 
 [node name="Label" type="Label" parent="Control/ColorRect/ColorRect2"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = -5.0
+offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 17
-text = "       
-        Somos um Jogo Eduvatico Projetado para 
-        Introdusir os alunos do curso tecnico em
-         informatica ao mundo da Programação 
-        de maneira divertida e interativa"
+theme_override_colors/font_color = Color(0.027451, 0.141176, 0.211765, 1)
+theme_override_constants/line_spacing = 25
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 18
+text = "
+ 
+ Somos um jogo educativo projetado para 
+ introduzir os alunos do curso técnico em 
+ informática ao mundo da programação de 
+ maneira divertida e interativa."
 
 [node name="ColorRect3" type="ColorRect" parent="Control/ColorRect"]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.489
-anchor_top = 0.711
+anchor_top = 0.702
 anchor_right = 0.489
 anchor_bottom = 0.711
-offset_left = -82.08
-offset_top = -19.8781
-offset_right = 81.92
-offset_bottom = 20.1219
+offset_left = -93.08
+offset_top = -27.196
+offset_right = 110.92
+offset_bottom = 24.1219
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.109804, 0.313726, 0.321569, 1)
@@ -222,9 +256,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -4.0
+offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Ola"
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "Enviar"
+flat = true
 
 [node name="Tela_Informacao" type="ColorRect" parent="Control"]
 layout_mode = 1
@@ -237,12 +276,14 @@ color = Color(0.027451, 0.141176, 0.211765, 1)
 
 [node name="Label" type="Label" parent="Control/Tela_Informacao"]
 layout_mode = 0
-offset_left = 80.0
-offset_top = 286.0
-offset_right = 635.0
-offset_bottom = 447.0
+offset_left = 83.0
+offset_top = 260.0
+offset_right = 638.0
+offset_bottom = 421.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1c0l5")
 theme_override_font_sizes/font_size = 27
-text = "MEO OVO E GRANDE "
+text = "Abaixo eu te explico como funciona a dinâmica do jogo"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -268,7 +309,9 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 32
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 42
 text = "Programação Ludica"
 
 [node name="ColorRect2" type="ColorRect" parent="Control/Tela_Informacao"]
@@ -277,26 +320,29 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 80.0
+offset_left = 43.0
 offset_top = -150.0
-offset_right = -72.0
+offset_right = -41.0
 offset_bottom = 202.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.109804, 0.313726, 0.321569, 1)
 
 [node name="Label" type="Label" parent="Control/Tela_Informacao/ColorRect2"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = -1
+anchor_top = 0.443
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_top = -6.0
+offset_top = -153.936
+offset_right = 318.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.109804, 0.313726, 0.321569, 1)
+theme_override_constants/line_spacing = 8
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 13
 text = "
-O jogo tem 3 níveis, cada um com 3 perguntas sobre programação 
-em Python:
+O jogo tem 3 níveis, cada um com 3 perguntas sobre programação em Python:
 
 Nível 1: Perguntas fáceis
 Nível 2: Perguntas médias
@@ -304,9 +350,11 @@ Nível 3: Perguntas difíceis
 
 Quanto mais rápido você responder, mais pontos ganhará.
 
-Observação: Ao clicar em iniciar, você terá que concluir o jogo.
-Vamos jogar?"
+Observação: Ao clicar em iniciar, você terá que ir até o fim do jogo.
+Vamos iniciar o jogo?"
 horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
 
 [node name="ColorRect3" type="ColorRect" parent="Control/Tela_Informacao"]
 layout_mode = 1
@@ -315,27 +363,23 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -88.0
-offset_top = -374.0
-offset_right = 88.0
-offset_bottom = -306.0
+offset_left = -101.0
+offset_top = -414.0
+offset_right = 99.0
+offset_bottom = -354.0
 grow_horizontal = 2
 grow_vertical = 0
-color = Color(0.0117647, 0.678431, 0, 1)
+color = Color(0.109804, 0.313726, 0.321569, 1)
 
 [node name="Button" type="Button" parent="Control/Tela_Informacao/ColorRect3"]
 layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
+anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -4.0
-offset_top = -31.0
-offset_right = -4.0
-offset_bottom = 29.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 21
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
 text = "INICIAR"
 flat = true
 
@@ -361,18 +405,25 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -18.5
-offset_right = 166.0
-offset_bottom = 18.5
+offset_left = 30.0
+offset_top = 8.5
+offset_right = 196.0
+offset_bottom = 45.5
 grow_vertical = 2
-theme_override_font_sizes/font_size = 27
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 30
 text = "Questão: 1/3"
 
 [node name="Label" type="Label" parent="Control/Jogo/ColorRect"]
 layout_mode = 1
-offset_right = 111.0
-offset_bottom = 37.0
-theme_override_font_sizes/font_size = 27
+offset_left = 31.0
+offset_top = 21.0
+offset_right = 142.0
+offset_bottom = 58.0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 30
 text = "Nivel: 01"
 
 [node name="Label" type="Label" parent="Control/Jogo"]
@@ -385,10 +436,11 @@ offset_top = -309.0
 offset_bottom = -252.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 30
 text = "Problema: Este código imprime os números de 1 a 10?"
 horizontal_alignment = 1
-autowrap_mode = 2
+autowrap_mode = 3
 
 [node name="Label2" type="Label" parent="Control/Jogo"]
 layout_mode = 1
@@ -396,29 +448,31 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_top = -173.0
-offset_bottom = -123.0
+offset_left = 146.0
+offset_top = -163.0
+offset_right = -418.0
+offset_bottom = -113.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 36
-text = "               Código:"
-horizontal_alignment = 3
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 30
+text = "Código:"
+horizontal_alignment = 1
 justification_flags = 35
 
 [node name="ColorRect2" type="ColorRect" parent="Control/Jogo"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = -1
+anchor_left = 0.486
 anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -216.0
+anchor_bottom = 0.533
+offset_left = -205.92
 offset_top = -110.0
 offset_right = 196.0
-offset_bottom = 196.0
+offset_bottom = 153.166
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.109804, 0.313726, 0.321569, 1)
 
 [node name="TextureRect" type="TextureRect" parent="Control/Jogo/ColorRect2"]
 layout_mode = 0
@@ -429,11 +483,13 @@ stretch_mode = 5
 
 [node name="Label" type="Label" parent="Control/Jogo/ColorRect2/TextureRect"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = -1
+anchor_right = 0.5
 anchor_bottom = 1.0
+offset_right = 202.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "for i in range(1, 11):
      print(i)"
@@ -448,35 +504,36 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -216.0
+offset_left = -216.5
 offset_top = -416.0
-offset_right = -15.0
+offset_right = 81.5
 offset_bottom = -386.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 21
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 20
 text = "Esta afirmação está:"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/Jogo"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -200.0
-offset_top = -344.0
-offset_right = 200.0
-offset_bottom = -242.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="Button" type="Button" parent="Control/Jogo/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Jogo"]
 layout_mode = 2
+offset_left = 149.0
+offset_top = 969.0
+offset_right = 549.0
+offset_bottom = 1029.0
+alignment = 1
+
+[node name="Button" type="Button" parent="Control/Jogo/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
 text = "Certo"
 
-[node name="Button2" type="Button" parent="Control/Jogo/VBoxContainer"]
+[node name="Button2" type="Button" parent="Control/Jogo/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
 text = "Errado"
 
 [node name="Game_Over" type="ColorRect" parent="Control"]
@@ -490,19 +547,21 @@ color = Color(0.109804, 0.313726, 0.321569, 1)
 
 [node name="Desc" type="Label" parent="Control/Game_Over"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = -1
+anchor_left = 0.507
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 0.507
 anchor_bottom = 0.5
-offset_left = -129.0
-offset_top = -27.0
-offset_right = 129.0
-offset_bottom = 27.0
+offset_left = -354.04
+offset_top = -61.0
+offset_right = 343.96
+offset_bottom = 41.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 39
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 32
 text = "Você Acertou:"
+autowrap_mode = 3
 
 [node name="Score" type="Label" parent="Control/Game_Over"]
 layout_mode = 1
@@ -511,13 +570,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -49.0
-offset_top = 86.0
-offset_right = 29.0
-offset_bottom = 155.0
+offset_left = -70.0
+offset_top = 44.0
+offset_right = 74.0
+offset_bottom = 113.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 55
 text = "0/0"
 
 [node name="Correto" type="AudioStreamPlayer" parent="."]
