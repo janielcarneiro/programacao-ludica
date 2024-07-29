@@ -7,7 +7,7 @@ extends Node
 var buttons: Array[Button]
 var index: int 
 var correct: int
-
+var timer = Timer.new()
 #retornar valor do meu index
 var current_quiz: QuizQuestion:
 	get: return quiz.theme[index]
@@ -110,6 +110,7 @@ func _next_question() -> void:
 	index += 1
 	
 	load_quiz()
+
 	
 func _game_over() -> void:
 	Game_Over.show()
