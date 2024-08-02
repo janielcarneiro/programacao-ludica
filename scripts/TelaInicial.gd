@@ -28,17 +28,36 @@ var current_quiz: QuizQuestion:
 
 @onready var Game_Over: ColorRect = $Control/Game_Over
 @onready var descFinal: Label = $Control/Game_Over/Desc
+
+#Essa parte vou trabalhar tutorial
+@onready var Opcao: ColorRect = $Control/Opcao
+
+@onready var Tutorialfor: ColorRect = $Control/TutorialFor
+@onready var TutorialForExec: ColorRect = $Control/TutorialForExec
+@onready var TutorialWhile: ColorRect = $Control/TutorialWhile
+@onready var TutorialWhileExec: ColorRect = $Control/TutorialWhileExec
+@onready var TutorialMatriz: ColorRect = $Control/TutorialMatriz
+@onready var TutorialMatrizExec: ColorRect = $Control/TutorialMatrizExec
+
 func _ready():
 	correct = 0
-	var img_texture = preload("res://imgs/Nilsin.png")
+	var img_texture = preload("res://imgs/TelaInicial.jpg")
 	texture_rect.texture = img_texture
 	Tela_Pegar_Nome.hide()
 	Tela_Informacao.hide()
 	Jogo.hide()
 	Game_Over.hide()
+	Opcao.hide()
+	Tutorialfor.hide()
+	TutorialForExec.hide()
+	TutorialWhile.hide()
+	TutorialWhileExec.hide()
+	TutorialMatriz.hide()
+	TutorialMatrizExec.hide()
+	
 	
 	#Adicionar botão dentro do vetor
-	for button in $Control/Jogo/VBoxContainer.get_children():
+	for button in $Control/Jogo/HBoxContainer.get_children():
 		buttons.append(button)
 	load_quiz()
 	
@@ -72,6 +91,7 @@ func _buttons_answer(button) -> void:
 	else:
 		button.modulate = color_wrong
 		$Incorreto.play()
+		
 	_next_question()
 	
 	print(button.text)
@@ -94,7 +114,7 @@ func _on_button_nome_pressed():
 #Essa parte vai Iniciar o jogo
 func _on_button_iniciar_jogo_pressed():
 	print("Botão iniciar")
-	Jogo.show()
+	Opcao.show()
 	pass # Replace with function body.
 
 #Passar para proxima quetaão
@@ -117,3 +137,89 @@ func _game_over() -> void:
 	descFinal.text = Nome.text + " Sua Pontuação foi de: "
 	$Control/Game_Over/Score.text = str(correct, "/", quiz.theme.size())
 	print("ACABOU SE TODAS AS PERGUNTAS")
+
+
+func _on_button_praticar_pressed():
+	Opcao.hide()
+	Jogo.show()
+	$Trilha.play()
+	pass # Replace with function body.
+
+
+func _on_button_ir_tutorialfor_pressed():
+	Opcao.hide()
+	Tutorialfor.show()
+	pass # Replace with function body.
+
+#Esse daquei voltar do Tutorial For
+func _on_voltar_tutorial_for_pressed():
+	Tutorialfor.hide()
+	Opcao.show()
+	pass # Replace with function body.
+
+#Esse daquei proximo do Tutorial For
+func _on_proximo_tutorial_exec_pressed():
+	Tutorialfor.hide()
+	TutorialForExec.show()
+	pass # Replace with function body.
+
+#Esse daquei voltar do Tutorial for exex
+func _on_voltar_tutorial_exec_pressed():
+	Tutorialfor.show()
+	TutorialForExec.hide()
+	pass # Replace with function body.
+
+#Esse daquei proximo do Tutorial for exex
+func _on_proximo_tutorial_for_exec_pressed():
+	TutorialForExec.hide()
+	TutorialWhile.show()
+	pass # Replace with function body.
+
+#butão do while voltar
+func _on_voltar_while_voltar_pressed():
+	TutorialWhile.hide()
+	TutorialForExec.show()
+	pass # Replace with function body.
+
+#proximo tutorial while
+func _on_proximo_tutorial_while_pressed():
+	TutorialWhile.hide()
+	TutorialWhileExec.show()
+	pass # Replace with function body.
+
+#Voltar while exec
+func _on_voltar_while_exec_pressed():
+	TutorialWhile.show()
+	TutorialWhileExec.hide()
+	pass # Replace with function body.
+
+#proximo while exec
+func _on_proximo_tutorial_while_exec_pressed():
+	TutorialWhileExec.hide()
+	TutorialMatriz.show()
+	pass # Replace with function body.
+
+#Voltar matriz
+func _on_voltar_matriz_pressed():
+	TutorialMatriz.hide()
+	TutorialWhileExec.show()
+	pass # Replace with function body.
+
+#Proximo matriz
+func _on_proximo_matriz_pressed():
+	TutorialMatriz.hide()
+	TutorialMatrizExec.show()
+	pass # Replace with function body.
+
+#Voltar da matriz
+func _on_voltar_matriz_exec_pressed():
+	TutorialMatriz.show()
+	TutorialMatrizExec.hide()
+	pass # Replace with function body.
+
+#Proximo da matriz
+func _on_proximo_matriz_exec_pressed():
+	TutorialMatrizExec.hide()
+	Jogo.show()
+	$Trilha.play()
+	pass # Replace with function body.
