@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://df1ahxmgj37y2"]
+[gd_scene load_steps=9 format=3 uid="uid://df1ahxmgj37y2"]
 
 [ext_resource type="Script" path="res://scripts/TelaInicial.gd" id="1_jhv75"]
 [ext_resource type="Resource" uid="uid://cmgr2p7euw6s2" path="res://resources/varied/theme/Tema_Variado.tres" id="2_fa0kv"]
 [ext_resource type="FontFile" uid="uid://brydv46tk0fd3" path="res://resources/Fonts/04B_11__.TTF" id="3_1c0l5"]
 [ext_resource type="AudioStream" uid="uid://dxgc5ufxgd86p" path="res://sounds/correct.ogg" id="3_rj8xm"]
 [ext_resource type="AudioStream" uid="uid://b10krkw44jqlx" path="res://sounds/incorrect.ogg" id="4_0f32i"]
+[ext_resource type="Texture2D" uid="uid://doayrant2de6o" path="res://imgs/Screenshot_1.png" id="4_bk04q"]
+[ext_resource type="Texture2D" uid="uid://df5w215xebxel" path="res://imgs/Screenshot_2.png" id="5_nj4d2"]
 [ext_resource type="AudioStream" uid="uid://dnknyse5y0hgf" path="res://sounds/Trilha.ogg" id="6_myhbj"]
 
 [node name="Main" type="CanvasLayer"]
@@ -126,6 +128,7 @@ text = "INICIAR"
 flat = true
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -267,10 +270,12 @@ text = "Enviar"
 flat = true
 
 [node name="Tela_Informacao" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = -1
+anchor_right = 0.5
 anchor_bottom = 1.0
+offset_right = 360.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.027451, 0.141176, 0.211765, 1)
@@ -385,6 +390,7 @@ text = "INICIAR"
 flat = true
 
 [node name="Jogo" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -538,6 +544,7 @@ theme_override_font_sizes/font_size = 25
 text = "Errado"
 
 [node name="Game_Over" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -582,6 +589,7 @@ theme_override_font_sizes/font_size = 55
 text = "0/0"
 
 [node name="Opcao" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -592,103 +600,230 @@ color = Color(0.027451, 0.141176, 0.211765, 1)
 
 [node name="Label" type="Label" parent="Control/Opcao"]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -122.0
-offset_top = -329.0
-offset_right = 110.0
-offset_bottom = -294.0
+anchor_right = 0.502
+anchor_bottom = 1.0
+offset_left = -305.5
+offset_top = 45.0
+offset_right = 307.06
+offset_bottom = -550.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 39
-text = "O que vc deja fazer"
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 36
+text = "O que vc deseja fazer?"
 
-[node name="Button" type="Button" parent="Control/Opcao"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Opcao"]
+custom_minimum_size = Vector2(118, 43)
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.969
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -147.0
-offset_top = -99.0
-offset_right = -24.0
-offset_bottom = -56.0
+anchor_bottom = 1.0
+offset_left = -175.0
+offset_top = -431.762
+offset_right = 158.0
+offset_bottom = -304.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="Control/Opcao/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.109804, 0.313726, 0.321569, 1)
+
+[node name="Button" type="Button" parent="Control/Opcao/VBoxContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -5.9
+anchor_right = 0.52
+anchor_bottom = -3.1
+offset_top = 482.8
+offset_right = 159.84
+offset_bottom = 336.2
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
 theme_override_font_sizes/font_size = 25
-text = "Aprender"
+text = "PRATICAR"
+flat = true
 
-[node name="Button2" type="Button" parent="Control/Opcao"]
+[node name="ColorRect2" type="ColorRect" parent="Control/Opcao/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.109804, 0.313726, 0.321569, 1)
+
+[node name="Button" type="Button" parent="Control/Opcao/VBoxContainer/ColorRect2"]
 layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -318.0
-offset_top = -99.0
-offset_right = -214.0
-offset_bottom = -56.0
-grow_horizontal = 0
+anchors_preset = -1
+anchor_top = -5.9
+anchor_right = 0.52
+anchor_bottom = -3.1
+offset_top = 484.8
+offset_right = 157.84
+offset_bottom = 334.2
+grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
 theme_override_font_sizes/font_size = 25
-text = "Praticar"
+text = "APRENDER"
+flat = true
+
+[node name="Screenshot1" type="Sprite2D" parent="Control/Opcao"]
+position = Vector2(360, 443)
+scale = Vector2(0.72093, 0.651648)
+texture = ExtResource("4_bk04q")
 
 [node name="TutorialFor" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_left = 0.114
+anchor_right = 0.905
+anchor_bottom = 0.924
+offset_left = -82.08
+offset_right = 68.4
+offset_bottom = 98.6479
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.027451, 0.141176, 0.211765, 1)
-
-[node name="Voltar" type="Button" parent="Control/TutorialFor"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 178.0
-offset_top = -13.0
-offset_right = 260.0
-offset_bottom = 30.0
-grow_vertical = 2
-theme_override_font_sizes/font_size = 25
-text = "Voltar"
-
-[node name="Proximo" type="Button" parent="Control/TutorialFor"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 30.0
-offset_top = -15.0
-offset_right = 139.0
-offset_bottom = 28.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 25
-text = "Proximo"
 
 [node name="Label" type="Label" parent="Control/TutorialFor"]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
+anchor_bottom = 0.031
+offset_left = -211.5
+offset_top = 367.25
+offset_right = 199.5
+offset_bottom = 362.012
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
 theme_override_font_sizes/font_size = 25
-text = "Laço de repetição for Pseudocodigo"
+text = "Laço de repetição “for”"
+
+[node name="Screenshot1" type="Sprite2D" parent="Control/TutorialFor"]
+position = Vector2(354, 192.25)
+scale = Vector2(0.72093, 0.651648)
+texture = ExtResource("4_bk04q")
+
+[node name="Label2" type="Label" parent="Control/TutorialFor"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 436.0
+offset_right = 633.0
+offset_bottom = 765.0
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "A estrutura “for” é usada para iterar sobre uma sequência (como uma lista, tupla, dicionário, conjunto ou string). Em cada iteração, o for atribui o próximo valor da sequência à variável de iteração e executa o bloco de código associado."
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="Control/TutorialFor"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 87.0
+offset_top = 124.0
+offset_right = -477.0
+offset_bottom = 174.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 30
+text = "Código:"
+horizontal_alignment = 1
+justification_flags = 35
+
+[node name="ColorRect2" type="ColorRect" parent="Control/TutorialFor"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.486
+anchor_top = 0.465
+anchor_right = 0.842
+anchor_bottom = 0.533
+offset_left = -264.92
+offset_top = 222.43
+offset_right = 23.7599
+offset_bottom = 333.166
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/TutorialFor/ColorRect2"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 11.0
+offset_right = 488.0
+offset_bottom = 197.0
+theme_override_font_sizes/font_size = 20
+text = "* Exemplo de uma lista de frutas
+frutas = [\"maçã\", \"banana\", \"laranja\", \"uva\"]
+
+* Usando a estrutura 'for' para iterar sobre a lista
+for fruta in frutas:
+    print(f\"Eu gosto de {fruta}\")"
+
+[node name="ColorRect3" type="ColorRect" parent="Control/TutorialFor"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -279.0
+offset_top = -156.0
+offset_right = -79.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.109804, 0.313726, 0.321569, 1)
+
+[node name="Button" type="Button" parent="Control/TutorialFor/ColorRect3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "VOLTAR"
+flat = true
+
+[node name="ColorRect4" type="ColorRect" parent="Control/TutorialFor"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.925
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 436.0
+offset_top = -58.6501
+offset_right = 276.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.109804, 0.313726, 0.321569, 1)
+
+[node name="Button" type="Button" parent="Control/TutorialFor/ColorRect4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "PRÓXIMO"
+flat = true
 
 [node name="TutorialForExec" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -697,51 +832,140 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.027451, 0.141176, 0.211765, 1)
 
-[node name="proximo" type="Label" parent="Control/TutorialForExec"]
+[node name="Label" type="Label" parent="Control/TutorialForExec"]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
+anchor_bottom = 0.031
+offset_left = -211.5
+offset_top = 367.25
+offset_right = 199.5
+offset_bottom = 362.012
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
 theme_override_font_sizes/font_size = 25
-text = "Execução do Codigo"
+text = "Laço de repetição “for”"
 
-[node name="Voltar" type="Button" parent="Control/TutorialForExec"]
+[node name="Screenshot1" type="Sprite2D" parent="Control/TutorialForExec"]
+position = Vector2(354, 192.25)
+scale = Vector2(0.72093, 0.651648)
+texture = ExtResource("4_bk04q")
+
+[node name="Label2" type="Label" parent="Control/TutorialForExec"]
+offset_left = 85.0
+offset_top = 436.0
+offset_right = 633.0
+offset_bottom = 593.0
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "Aqui está um exemplo de código em Python que ilustra a explicação sobre a estrutura for:
+
+Exemplo de uma lista de frutas
+frutas = [\"maçã\", \"banana\", \"laranja\", \"uva\"]"
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="Control/TutorialForExec"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 14
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -195.0
-offset_top = -31.0
-offset_right = -113.0
-offset_bottom = 12.0
+offset_left = 87.0
+offset_top = 124.0
+offset_right = -477.0
+offset_bottom = 174.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 25
-text = "Voltar"
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 30
+text = "Saida:"
+horizontal_alignment = 1
+justification_flags = 35
 
-[node name="Proximo" type="Button" parent="Control/TutorialForExec"]
+[node name="ColorRect2" type="ColorRect" parent="Control/TutorialForExec"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 66.0
-offset_top = -31.0
-offset_right = 175.0
-offset_bottom = 12.0
+anchors_preset = -1
+anchor_left = 0.486
+anchor_top = 0.465
+anchor_right = 0.842
+anchor_bottom = 0.533
+offset_left = -264.92
+offset_top = 222.43
+offset_right = 23.7599
+offset_bottom = 333.166
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/TutorialForExec/ColorRect2"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 11.0
+offset_right = 488.0
+offset_bottom = 197.0
+theme_override_font_sizes/font_size = 20
+text = "
+Eu gosto de maçã
+Eu gosto de banana
+Eu gosto de laranja
+Eu gosto de uva"
+
+[node name="ColorRect3" type="ColorRect" parent="Control/TutorialForExec"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -279.0
+offset_top = -156.0
+offset_right = -79.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.109804, 0.313726, 0.321569, 1)
+
+[node name="Button" type="Button" parent="Control/TutorialForExec/ColorRect3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
 theme_override_font_sizes/font_size = 25
-text = "Proximo"
+text = "VOLTAR"
+flat = true
+
+[node name="ColorRect4" type="ColorRect" parent="Control/TutorialForExec"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.925
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 436.0
+offset_top = -58.6501
+offset_right = 276.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.109804, 0.313726, 0.321569, 1)
+
+[node name="Button" type="Button" parent="Control/TutorialForExec/ColorRect4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "PRÓXIMO"
+flat = true
 
 [node name="TutorialWhile" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -752,41 +976,134 @@ color = Color(0.027451, 0.141176, 0.211765, 1)
 
 [node name="Label" type="Label" parent="Control/TutorialWhile"]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
+anchor_bottom = 0.031
+offset_left = -211.5
+offset_top = 367.25
+offset_right = 199.5
+offset_bottom = 362.012
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
 theme_override_font_sizes/font_size = 25
-text = "Tutorial While"
+text = "Laço de repetição “while”"
 
-[node name="Voltar" type="Button" parent="Control/TutorialWhile"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -4.0
-offset_right = 8.0
-offset_bottom = 4.0
-grow_vertical = 2
-text = "Voltar"
+[node name="Screenshot1" type="Sprite2D" parent="Control/TutorialWhile"]
+position = Vector2(354, 192.25)
+scale = Vector2(0.72093, 0.651648)
+texture = ExtResource("4_bk04q")
 
-[node name="Proximo" type="Button" parent="Control/TutorialWhile"]
+[node name="Label2" type="Label" parent="Control/TutorialWhile"]
+offset_left = 85.0
+offset_top = 436.0
+offset_right = 633.0
+offset_bottom = 765.0
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "A estrutura “while” repete um bloco de código enquanto uma condição especificada é verdadeira. Assim que a condição se torna falsa, a execução do loop é interrompida."
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="Control/TutorialWhile"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 14
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -4.0
-offset_top = -4.0
-offset_right = 4.0
-offset_bottom = 4.0
+offset_left = 87.0
+offset_top = 124.0
+offset_right = -477.0
+offset_bottom = 174.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Proximo"
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 30
+text = "Código:"
+horizontal_alignment = 1
+justification_flags = 35
+
+[node name="ColorRect2" type="ColorRect" parent="Control/TutorialWhile"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.486
+anchor_top = 0.465
+anchor_right = 0.842
+anchor_bottom = 0.533
+offset_left = -264.92
+offset_top = 222.43
+offset_right = 23.7599
+offset_bottom = 333.166
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/TutorialWhile/ColorRect2"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 5.0
+offset_top = -2.0
+offset_right = 539.0
+offset_bottom = 193.0
+theme_override_font_sizes/font_size = 20
+text = "* Usando a estrutura 'while' para iterar até que a condição seja falsa
+while contador > 0:
+    print(f\"Contagem: {contador}\")
+    contador -= 1  # Decrementa o valor do contador
+print(\"Contagem finalizada!\")"
+autowrap_mode = 2
+
+[node name="ColorRect3" type="ColorRect" parent="Control/TutorialWhile"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -279.0
+offset_top = -156.0
+offset_right = -79.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.109804, 0.313726, 0.321569, 1)
+
+[node name="Button" type="Button" parent="Control/TutorialWhile/ColorRect3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "VOLTAR"
+flat = true
+
+[node name="ColorRect4" type="ColorRect" parent="Control/TutorialWhile"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.925
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 436.0
+offset_top = -58.6501
+offset_right = 276.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.109804, 0.313726, 0.321569, 1)
+
+[node name="Button" type="Button" parent="Control/TutorialWhile/ColorRect4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "PRÓXIMO"
+flat = true
 
 [node name="TutorialWhileExec" type="ColorRect" parent="Control"]
 layout_mode = 1
@@ -799,41 +1116,135 @@ color = Color(0.027451, 0.141176, 0.211765, 1)
 
 [node name="Label" type="Label" parent="Control/TutorialWhileExec"]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
+anchor_bottom = 0.031
+offset_left = -211.5
+offset_top = 367.25
+offset_right = 199.5
+offset_bottom = 362.012
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
 theme_override_font_sizes/font_size = 25
-text = "Execução do codigo While"
+text = "Laço de repetição “While”"
 
-[node name="Voltar" type="Button" parent="Control/TutorialWhileExec"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -15.5
-offset_right = 55.0
-offset_bottom = 15.5
-grow_vertical = 2
-text = "Voltar"
+[node name="Screenshot1" type="Sprite2D" parent="Control/TutorialWhileExec"]
+position = Vector2(354, 192.25)
+scale = Vector2(0.72093, 0.651648)
+texture = ExtResource("4_bk04q")
 
-[node name="Proximo" type="Button" parent="Control/TutorialWhileExec"]
+[node name="Label2" type="Label" parent="Control/TutorialWhileExec"]
+offset_left = 85.0
+offset_top = 436.0
+offset_right = 633.0
+offset_bottom = 593.0
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "Aqui está um exemplo de código em Python que ilustra a explicação sobre a estrutura for:
+
+# Exemplo de uma contagem regressiva contador = 5"
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="Control/TutorialWhileExec"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 14
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -36.5
-offset_top = -15.5
-offset_right = 36.5
-offset_bottom = 15.5
+offset_left = 87.0
+offset_top = 124.0
+offset_right = -477.0
+offset_bottom = 174.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Proximo"
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 30
+text = "Saida:"
+horizontal_alignment = 1
+justification_flags = 35
+
+[node name="ColorRect2" type="ColorRect" parent="Control/TutorialWhileExec"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.486
+anchor_top = 0.465
+anchor_right = 0.842
+anchor_bottom = 0.533
+offset_left = -264.92
+offset_top = 222.43
+offset_right = 23.7599
+offset_bottom = 333.166
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/TutorialWhileExec/ColorRect2"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 11.0
+offset_right = 488.0
+offset_bottom = 197.0
+theme_override_font_sizes/font_size = 20
+text = "Contagem: 5
+Contagem: 4
+Contagem: 3
+Contagem: 2
+Contagem: 1
+Contagem finalizada!"
+
+[node name="ColorRect3" type="ColorRect" parent="Control/TutorialWhileExec"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -279.0
+offset_top = -156.0
+offset_right = -79.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.109804, 0.313726, 0.321569, 1)
+
+[node name="Button" type="Button" parent="Control/TutorialWhileExec/ColorRect3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "VOLTAR"
+flat = true
+
+[node name="ColorRect4" type="ColorRect" parent="Control/TutorialWhileExec"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.925
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 436.0
+offset_top = -58.6501
+offset_right = 276.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.109804, 0.313726, 0.321569, 1)
+
+[node name="Button" type="Button" parent="Control/TutorialWhileExec/ColorRect4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "PRÓXIMO"
+flat = true
 
 [node name="TutorialMatriz" type="ColorRect" parent="Control"]
 layout_mode = 1
@@ -846,88 +1257,370 @@ color = Color(0.027451, 0.141176, 0.211765, 1)
 
 [node name="Label" type="Label" parent="Control/TutorialMatriz"]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -57.0
-offset_right = 57.0
-offset_bottom = 23.0
+anchor_bottom = 0.031
+offset_left = -211.5
+offset_top = 367.25
+offset_right = 199.5
+offset_bottom = 362.012
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
 theme_override_font_sizes/font_size = 25
-text = "Tutorial Matriz"
+text = "Preenchimento de 
+matrizes com o “for”"
 
-[node name="Voltar" type="Button" parent="Control/TutorialMatriz"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -15.5
-offset_right = 55.0
-offset_bottom = 15.5
-grow_vertical = 2
-text = "Voltar"
+[node name="Screenshot1" type="Sprite2D" parent="Control/TutorialMatriz"]
+position = Vector2(354, 192.25)
+scale = Vector2(0.72093, 0.651648)
+texture = ExtResource("4_bk04q")
 
-[node name="Proximo" type="Button" parent="Control/TutorialMatriz"]
+[node name="Label2" type="Label" parent="Control/TutorialMatriz"]
+offset_left = 85.0
+offset_top = 456.0
+offset_right = 633.0
+offset_bottom = 663.0
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "Uma matriz pode ser representada em Python como uma lista de listas. Para preencher uma matriz, você pode usar loops “for“ aninhados."
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="Control/TutorialMatriz"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 14
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -4.0
-offset_top = -4.0
-offset_right = 4.0
-offset_bottom = 4.0
+offset_left = 87.0
+offset_top = 124.0
+offset_right = -477.0
+offset_bottom = 174.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Proximo"
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 30
+text = "Matriz:"
+horizontal_alignment = 1
+justification_flags = 35
 
-[node name="TutorialMatrizExec" type="ColorRect" parent="Control"]
+[node name="ColorRect2" type="ColorRect" parent="Control/TutorialMatriz"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.486
+anchor_top = 0.465
+anchor_right = 0.842
+anchor_bottom = 0.533
+offset_left = -264.92
+offset_top = 222.43
+offset_right = 23.7599
+offset_bottom = 333.166
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/TutorialMatriz/ColorRect2"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 218.0
+offset_top = 33.0
+offset_right = 312.0
+offset_bottom = 144.0
+theme_override_font_sizes/font_size = 25
+text = "[1, 2, 3] 
+[4, 5, 6] 
+[7, 8, 9]"
+autowrap_mode = 2
+
+[node name="ColorRect3" type="ColorRect" parent="Control/TutorialMatriz"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -279.0
+offset_top = -156.0
+offset_right = -79.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.109804, 0.313726, 0.321569, 1)
+
+[node name="Button" type="Button" parent="Control/TutorialMatriz/ColorRect3"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "VOLTAR"
+flat = true
+
+[node name="ColorRect4" type="ColorRect" parent="Control/TutorialMatriz"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.925
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 436.0
+offset_top = -58.6501
+offset_right = 276.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.109804, 0.313726, 0.321569, 1)
+
+[node name="Button" type="Button" parent="Control/TutorialMatriz/ColorRect4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "PRÓXIMO"
+flat = true
+
+[node name="TutorialMatrizExec" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -72.0
+offset_right = -4.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.027451, 0.141176, 0.211765, 1)
 
 [node name="Label" type="Label" parent="Control/TutorialMatrizExec"]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -95.5
-offset_right = 95.5
-offset_bottom = 23.0
+anchor_bottom = 0.031
+offset_left = -211.5
+offset_top = 428.25
+offset_right = 199.5
+offset_bottom = 451.012
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
 theme_override_font_sizes/font_size = 25
-text = "Tutorial Matriz Execução"
+text = "Preenchimento de 
+matrizes com o “for”"
 
-[node name="Voltar" type="Button" parent="Control/TutorialMatrizExec"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -15.5
-offset_right = 55.0
-offset_bottom = 15.5
-grow_vertical = 2
-text = "Voltar"
+[node name="Screenshot1" type="Sprite2D" parent="Control/TutorialMatrizExec"]
+position = Vector2(354, 253.25)
+scale = Vector2(0.72093, 0.651648)
+texture = ExtResource("4_bk04q")
 
-[node name="Proximo" type="Button" parent="Control/TutorialMatrizExec"]
+[node name="Label3" type="Label" parent="Control/TutorialMatrizExec"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 14
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -4.0
-offset_top = -4.0
-offset_right = 4.0
-offset_bottom = 4.0
+offset_left = 87.0
+offset_top = -128.0
+offset_right = -477.0
+offset_bottom = -78.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Proximo"
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 30
+text = "Código:"
+horizontal_alignment = 1
+justification_flags = 35
+
+[node name="ColorRect2" type="ColorRect" parent="Control/TutorialMatrizExec"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.118
+anchor_top = 0.465
+anchor_right = 0.889
+anchor_bottom = 0.912
+offset_left = 0.0399933
+offset_top = -29.5701
+offset_right = -0.0800171
+offset_bottom = -12.7761
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/TutorialMatrizExec/ColorRect2"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 9.0
+offset_right = 540.0
+offset_bottom = 584.0
+theme_override_font_sizes/font_size = 25
+text = "# Usando a estrutura 'for' para iterar sobre as linhas da matriz
+
+for i in range(len(matriz)):
+# Usando a estrutura 'for' para iterar sobre as colunas da linha atual.
+
+    for j in range(len(matriz [ i ] ) ):
+        print(f\"Elemento na posição [ { i } ] [ { j } ]: {matriz [ i ] [ j ] }\")"
+autowrap_mode = 2
+
+[node name="ColorRect3" type="ColorRect" parent="Control/TutorialMatrizExec"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -279.0
+offset_top = -95.0
+offset_right = -79.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.109804, 0.313726, 0.321569, 1)
+
+[node name="Button" type="Button" parent="Control/TutorialMatrizExec/ColorRect3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "VOLTAR"
+flat = true
+
+[node name="ColorRect4" type="ColorRect" parent="Control/TutorialMatrizExec"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.925
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 436.0
+offset_top = 2.34985
+offset_right = 276.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.109804, 0.313726, 0.321569, 1)
+
+[node name="Button" type="Button" parent="Control/TutorialMatrizExec/ColorRect4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "PRÓXIMO"
+flat = true
+
+[node name="TutorialMatrizExec2" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.055
+anchor_right = 0.994
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -0.609993
+offset_right = 0.320007
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.027451, 0.141176, 0.211765, 1)
+
+[node name="Label" type="Label" parent="Control/TutorialMatrizExec2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.031
+offset_left = -267.0
+offset_top = 700.0
+offset_right = 274.0
+offset_bottom = 926.762
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "Parabens! você finalizou 
+o tutorial sobre estruturas 
+de repetição. 
+Agora você pode praticar
+resolvendo questões. "
+
+[node name="Screenshot1" type="Sprite2D" parent="Control/TutorialMatrizExec2"]
+position = Vector2(354, 253.25)
+scale = Vector2(0.72093, 0.651648)
+texture = ExtResource("4_bk04q")
+
+[node name="Screenshot2" type="Sprite2D" parent="Control/TutorialMatrizExec2"]
+position = Vector2(361, 544.625)
+scale = Vector2(0.609589, 0.618601)
+texture = ExtResource("5_nj4d2")
+
+[node name="ColorRect3" type="ColorRect" parent="Control/TutorialMatrizExec2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -279.0
+offset_top = -156.0
+offset_right = -79.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.109804, 0.313726, 0.321569, 1)
+
+[node name="Button" type="Button" parent="Control/TutorialMatrizExec2/ColorRect3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "VOLTAR"
+flat = true
+
+[node name="ColorRect4" type="ColorRect" parent="Control/TutorialMatrizExec2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.925
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 436.0
+offset_top = -58.6501
+offset_right = 276.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.109804, 0.313726, 0.321569, 1)
+
+[node name="Button" type="Button" parent="Control/TutorialMatrizExec2/ColorRect4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.78
+anchor_top = -8.441
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 356.0
+offset_top = 506.46
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "PRATICAR"
+flat = true
 
 [node name="Correto" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_rj8xm")
@@ -941,17 +1634,19 @@ stream = ExtResource("6_myhbj")
 [connection signal="pressed" from="Control/VBoxContainer/ColorRect/VBoxContainer/ColorRect/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/ColorRect/ColorRect3/Button" to="." method="_on_button_nome_pressed"]
 [connection signal="pressed" from="Control/Tela_Informacao/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
-[connection signal="pressed" from="Control/Opcao/Button" to="." method="_on_button_ir_tutorialfor_pressed"]
-[connection signal="pressed" from="Control/Opcao/Button2" to="." method="_on_button_praticar_pressed"]
-[connection signal="pressed" from="Control/TutorialFor/Voltar" to="." method="_on_voltar_tutorial_for_pressed"]
-[connection signal="pressed" from="Control/TutorialFor/Proximo" to="." method="_on_proximo_tutorial_exec_pressed"]
-[connection signal="pressed" from="Control/TutorialForExec/Voltar" to="." method="_on_voltar_tutorial_exec_pressed"]
-[connection signal="pressed" from="Control/TutorialForExec/Proximo" to="." method="_on_proximo_tutorial_for_exec_pressed"]
-[connection signal="pressed" from="Control/TutorialWhile/Voltar" to="." method="_on_voltar_while_voltar_pressed"]
-[connection signal="pressed" from="Control/TutorialWhile/Proximo" to="." method="_on_proximo_tutorial_while_pressed"]
-[connection signal="pressed" from="Control/TutorialWhileExec/Voltar" to="." method="_on_voltar_while_exec_pressed"]
-[connection signal="pressed" from="Control/TutorialWhileExec/Proximo" to="." method="_on_proximo_tutorial_while_exec_pressed"]
-[connection signal="pressed" from="Control/TutorialMatriz/Voltar" to="." method="_on_voltar_matriz_pressed"]
-[connection signal="pressed" from="Control/TutorialMatriz/Proximo" to="." method="_on_proximo_matriz_pressed"]
-[connection signal="pressed" from="Control/TutorialMatrizExec/Voltar" to="." method="_on_voltar_matriz_exec_pressed"]
-[connection signal="pressed" from="Control/TutorialMatrizExec/Proximo" to="." method="_on_proximo_matriz_exec_pressed"]
+[connection signal="pressed" from="Control/Opcao/VBoxContainer/ColorRect/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Opcao/VBoxContainer/ColorRect2/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/TutorialFor/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialFor/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialForExec/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialForExec/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialWhile/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialWhile/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialWhileExec/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialWhileExec/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialMatriz/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialMatriz/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialMatrizExec/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialMatrizExec/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialMatrizExec2/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialMatrizExec2/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
