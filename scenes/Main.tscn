@@ -128,7 +128,6 @@ text = "INICIAR"
 flat = true
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -589,7 +588,6 @@ theme_override_font_sizes/font_size = 55
 text = "0/0"
 
 [node name="Opcao" type="ColorRect" parent="Control"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -853,6 +851,7 @@ scale = Vector2(0.72093, 0.651648)
 texture = ExtResource("4_bk04q")
 
 [node name="Label2" type="Label" parent="Control/TutorialForExec"]
+layout_mode = 0
 offset_left = 85.0
 offset_top = 436.0
 offset_right = 633.0
@@ -995,6 +994,7 @@ scale = Vector2(0.72093, 0.651648)
 texture = ExtResource("4_bk04q")
 
 [node name="Label2" type="Label" parent="Control/TutorialWhile"]
+layout_mode = 0
 offset_left = 85.0
 offset_top = 436.0
 offset_right = 633.0
@@ -1106,6 +1106,7 @@ text = "PRÓXIMO"
 flat = true
 
 [node name="TutorialWhileExec" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1135,6 +1136,7 @@ scale = Vector2(0.72093, 0.651648)
 texture = ExtResource("4_bk04q")
 
 [node name="Label2" type="Label" parent="Control/TutorialWhileExec"]
+layout_mode = 0
 offset_left = 85.0
 offset_top = 436.0
 offset_right = 633.0
@@ -1247,6 +1249,7 @@ text = "PRÓXIMO"
 flat = true
 
 [node name="TutorialMatriz" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1277,6 +1280,7 @@ scale = Vector2(0.72093, 0.651648)
 texture = ExtResource("4_bk04q")
 
 [node name="Label2" type="Label" parent="Control/TutorialMatriz"]
+layout_mode = 0
 offset_left = 85.0
 offset_top = 456.0
 offset_right = 633.0
@@ -1322,14 +1326,12 @@ grow_vertical = 2
 modulate = Color(0, 0, 0, 1)
 self_modulate = Color(0, 0, 0, 1)
 layout_mode = 0
-offset_left = 218.0
-offset_top = 33.0
-offset_right = 312.0
-offset_bottom = 144.0
+offset_left = 6.0
+offset_top = -5.0
+offset_right = 562.0
+offset_bottom = 372.0
 theme_override_font_sizes/font_size = 25
-text = "[1, 2, 3] 
-[4, 5, 6] 
-[7, 8, 9]"
+text = "A que vai ficar o meu tutorial"
 autowrap_mode = 2
 
 [node name="ColorRect3" type="ColorRect" parent="Control/TutorialMatriz"]
@@ -1386,6 +1388,7 @@ text = "PRÓXIMO"
 flat = true
 
 [node name="TutorialMatrizExec" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1460,13 +1463,7 @@ offset_top = 9.0
 offset_right = 540.0
 offset_bottom = 584.0
 theme_override_font_sizes/font_size = 25
-text = "# Usando a estrutura 'for' para iterar sobre as linhas da matriz
-
-for i in range(len(matriz)):
-# Usando a estrutura 'for' para iterar sobre as colunas da linha atual.
-
-    for j in range(len(matriz [ i ] ) ):
-        print(f\"Elemento na posição [ { i } ] [ { j } ]: {matriz [ i ] [ j ] }\")"
+text = "A que vai ficar Minha Execução"
 autowrap_mode = 2
 
 [node name="ColorRect3" type="ColorRect" parent="Control/TutorialMatrizExec"]
@@ -1522,7 +1519,7 @@ theme_override_font_sizes/font_size = 25
 text = "PRÓXIMO"
 flat = true
 
-[node name="TutorialMatrizExec2" type="ColorRect" parent="Control"]
+[node name="TutorialAcabado" type="ColorRect" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = -0.055
@@ -1536,7 +1533,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.027451, 0.141176, 0.211765, 1)
 
-[node name="Label" type="Label" parent="Control/TutorialMatrizExec2"]
+[node name="Label" type="Label" parent="Control/TutorialAcabado"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -1555,17 +1552,17 @@ de repetição.
 Agora você pode praticar
 resolvendo questões. "
 
-[node name="Screenshot1" type="Sprite2D" parent="Control/TutorialMatrizExec2"]
+[node name="Screenshot1" type="Sprite2D" parent="Control/TutorialAcabado"]
 position = Vector2(354, 253.25)
 scale = Vector2(0.72093, 0.651648)
 texture = ExtResource("4_bk04q")
 
-[node name="Screenshot2" type="Sprite2D" parent="Control/TutorialMatrizExec2"]
+[node name="Screenshot2" type="Sprite2D" parent="Control/TutorialAcabado"]
 position = Vector2(361, 544.625)
 scale = Vector2(0.609589, 0.618601)
 texture = ExtResource("5_nj4d2")
 
-[node name="ColorRect3" type="ColorRect" parent="Control/TutorialMatrizExec2"]
+[node name="ColorRect3" type="ColorRect" parent="Control/TutorialAcabado"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -1580,7 +1577,7 @@ grow_horizontal = 2
 grow_vertical = 0
 color = Color(0.109804, 0.313726, 0.321569, 1)
 
-[node name="Button" type="Button" parent="Control/TutorialMatrizExec2/ColorRect3"]
+[node name="Button" type="Button" parent="Control/TutorialAcabado/ColorRect3"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1592,7 +1589,7 @@ theme_override_font_sizes/font_size = 25
 text = "VOLTAR"
 flat = true
 
-[node name="ColorRect4" type="ColorRect" parent="Control/TutorialMatrizExec2"]
+[node name="ColorRect4" type="ColorRect" parent="Control/TutorialAcabado"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.925
@@ -1606,7 +1603,7 @@ grow_horizontal = 2
 grow_vertical = 0
 color = Color(0.109804, 0.313726, 0.321569, 1)
 
-[node name="Button" type="Button" parent="Control/TutorialMatrizExec2/ColorRect4"]
+[node name="Button" type="Button" parent="Control/TutorialAcabado/ColorRect4"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -1.78
@@ -1634,19 +1631,35 @@ stream = ExtResource("6_myhbj")
 [connection signal="pressed" from="Control/VBoxContainer/ColorRect/VBoxContainer/ColorRect/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/ColorRect/ColorRect3/Button" to="." method="_on_button_nome_pressed"]
 [connection signal="pressed" from="Control/Tela_Informacao/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/Opcao/VBoxContainer/ColorRect/Button" to="." method="_on_button_praticar_pressed"]
 [connection signal="pressed" from="Control/Opcao/VBoxContainer/ColorRect/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Opcao/VBoxContainer/ColorRect2/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Opcao/VBoxContainer/ColorRect2/Button" to="." method="_on_button_ir_tutorialfor_pressed"]
 [connection signal="pressed" from="Control/TutorialFor/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialFor/ColorRect3/Button" to="." method="_on_voltar_tutorial_for_pressed"]
 [connection signal="pressed" from="Control/TutorialFor/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialFor/ColorRect4/Button" to="." method="_on_proximo_tutorial_exec_pressed"]
 [connection signal="pressed" from="Control/TutorialForExec/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialForExec/ColorRect3/Button" to="." method="_on_voltar_tutorial_exec_pressed"]
 [connection signal="pressed" from="Control/TutorialForExec/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialForExec/ColorRect4/Button" to="." method="_on_proximo_tutorial_for_exec_pressed"]
 [connection signal="pressed" from="Control/TutorialWhile/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialWhile/ColorRect3/Button" to="." method="_on_voltar_while_voltar_pressed"]
 [connection signal="pressed" from="Control/TutorialWhile/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialWhile/ColorRect4/Button" to="." method="_on_proximo_tutorial_while_pressed"]
 [connection signal="pressed" from="Control/TutorialWhileExec/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialWhileExec/ColorRect3/Button" to="." method="_on_voltar_while_exec_pressed"]
 [connection signal="pressed" from="Control/TutorialWhileExec/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialWhileExec/ColorRect4/Button" to="." method="_on_proximo_tutorial_while_exec_pressed"]
 [connection signal="pressed" from="Control/TutorialMatriz/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialMatriz/ColorRect3/Button" to="." method="_on_voltar_matriz_pressed"]
 [connection signal="pressed" from="Control/TutorialMatriz/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialMatriz/ColorRect4/Button" to="." method="_on_proximo_matriz_pressed"]
 [connection signal="pressed" from="Control/TutorialMatrizExec/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialMatrizExec/ColorRect3/Button" to="." method="_on_voltar_matriz_exec_pressed"]
+[connection signal="pressed" from="Control/TutorialMatrizExec/ColorRect3/Button" to="." method=" _on_voltar_matriz_exec_pressed"]
 [connection signal="pressed" from="Control/TutorialMatrizExec/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
-[connection signal="pressed" from="Control/TutorialMatrizExec2/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
-[connection signal="pressed" from="Control/TutorialMatrizExec2/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialMatrizExec/ColorRect4/Button" to="." method="_on_proximo_matriz_exec_pressed"]
+[connection signal="pressed" from="Control/TutorialAcabado/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialAcabado/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialAcabado/ColorRect4/Button" to="." method="_on_button_pressed_praticar"]

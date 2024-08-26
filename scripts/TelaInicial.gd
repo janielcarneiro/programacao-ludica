@@ -39,6 +39,7 @@ var current_quiz: QuizQuestion:
 @onready var TutorialMatriz: ColorRect = $Control/TutorialMatriz
 @onready var TutorialMatrizExec: ColorRect = $Control/TutorialMatrizExec
 
+@onready var TutorialAcabado: ColorRect = $Control/TutorialAcabado
 func _ready():
 	correct = 0
 	var img_texture = preload("res://imgs/TelaInicial.jpg")
@@ -54,6 +55,7 @@ func _ready():
 	TutorialWhileExec.hide()
 	TutorialMatriz.hide()
 	TutorialMatrizExec.hide()
+	TutorialAcabado.hide()
 	
 	
 	#Adicionar botão dentro do vetor
@@ -98,7 +100,7 @@ func _buttons_answer(button) -> void:
 	
 #Botão Iniciar
 func _on_button_pressed():
-	print("cliquei no botão")
+	print("cliquei no botão OK")
 	Tela_Pegar_Nome.show()
 	pass # Replace with function body.
 
@@ -220,6 +222,13 @@ func _on_voltar_matriz_exec_pressed():
 #Proximo da matriz
 func _on_proximo_matriz_exec_pressed():
 	TutorialMatrizExec.hide()
+	TutorialAcabado.show()
+	
+	pass # Replace with function body.
+
+
+
+func _on_button_pressed_praticar():
+	TutorialAcabado.hide()
 	Jogo.show()
-	$Trilha.play()
 	pass # Replace with function body.

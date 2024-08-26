@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_wpqux")
 question_info = "Tá funcionando Corretamenta"
-question_script = "Chupa meu ovo"
+question_script = "A que vai ficar Nivel 4"
 Nivel = "Nivel: 02"
 Questao = "Questão: 1/3"
 type = 0
