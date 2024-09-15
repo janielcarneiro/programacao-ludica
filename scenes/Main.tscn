@@ -269,7 +269,6 @@ text = "Enviar"
 flat = true
 
 [node name="Tela_Informacao" type="ColorRect" parent="Control"]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.5
@@ -353,8 +352,6 @@ Nível 1: Perguntas fáceis
 Nível 2: Perguntas médias
 Nível 3: Perguntas difíceis
 
-Quanto mais rápido você responder, mais pontos ganhará.
-
 Observação: Ao clicar em iniciar, você terá que ir até o fim do jogo.
 Vamos iniciar o jogo?"
 horizontal_alignment = 1
@@ -389,7 +386,6 @@ text = "INICIAR"
 flat = true
 
 [node name="Jogo" type="ColorRect" parent="Control"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -543,7 +539,6 @@ theme_override_font_sizes/font_size = 25
 text = "Errado"
 
 [node name="Game_Over" type="ColorRect" parent="Control"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -676,7 +671,6 @@ scale = Vector2(0.72093, 0.651648)
 texture = ExtResource("4_bk04q")
 
 [node name="TutorialFor" type="ColorRect" parent="Control"]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.114
@@ -821,7 +815,6 @@ text = "PRÓXIMO"
 flat = true
 
 [node name="TutorialForExec" type="ColorRect" parent="Control"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -858,7 +851,7 @@ offset_right = 633.0
 offset_bottom = 593.0
 theme_override_fonts/font = ExtResource("3_1c0l5")
 theme_override_font_sizes/font_size = 25
-text = "Aqui está um exemplo de código em Python que ilustra a explicação sobre a estrutura for:
+text = "Aqui está a saída do código em Python que ilustra a explicação sobre a estrutura for:
 
 Exemplo de uma lista de frutas
 frutas = [\"maçã\", \"banana\", \"laranja\", \"uva\"]"
@@ -964,7 +957,6 @@ text = "PRÓXIMO"
 flat = true
 
 [node name="TutorialWhile" type="ColorRect" parent="Control"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1106,7 +1098,6 @@ text = "PRÓXIMO"
 flat = true
 
 [node name="TutorialWhileExec" type="ColorRect" parent="Control"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1143,7 +1134,7 @@ offset_right = 633.0
 offset_bottom = 593.0
 theme_override_fonts/font = ExtResource("3_1c0l5")
 theme_override_font_sizes/font_size = 25
-text = "Aqui está um exemplo de código em Python que ilustra a explicação sobre a estrutura for:
+text = "Aqui está a saída do código em Python que ilustra a explicação sobre a estrutura for:
 
 # Exemplo de uma contagem regressiva contador = 5"
 autowrap_mode = 2
@@ -1249,7 +1240,6 @@ text = "PRÓXIMO"
 flat = true
 
 [node name="TutorialMatriz" type="ColorRect" parent="Control"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1265,9 +1255,9 @@ anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.031
 offset_left = -211.5
-offset_top = 367.25
+offset_top = 361.25
 offset_right = 199.5
-offset_bottom = 362.012
+offset_bottom = 384.012
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("3_1c0l5")
 theme_override_font_sizes/font_size = 25
@@ -1282,12 +1272,14 @@ texture = ExtResource("4_bk04q")
 [node name="Label2" type="Label" parent="Control/TutorialMatriz"]
 layout_mode = 0
 offset_left = 85.0
-offset_top = 456.0
-offset_right = 633.0
-offset_bottom = 663.0
+offset_top = 436.0
+offset_right = 667.0
+offset_bottom = 760.0
 theme_override_fonts/font = ExtResource("3_1c0l5")
 theme_override_font_sizes/font_size = 25
-text = "Uma matriz pode ser representada em Python como uma lista de listas. Para preencher uma matriz, você pode usar loops “for“ aninhados."
+text = "Uma matriz (ou array bidimensional) é uma estrutura de dados que permite armazenar elementos em linhas e colunas, semelhante a uma tabela. 
+
+EXEMPLO: Imaginemos uma matriz que representa as notas de 3 alunos em 3 provas diferentes."
 autowrap_mode = 2
 
 [node name="Label3" type="Label" parent="Control/TutorialMatriz"]
@@ -1296,16 +1288,16 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 87.0
-offset_top = 124.0
-offset_right = -477.0
-offset_bottom = 174.0
+offset_left = 83.0
+offset_top = 108.0
+offset_right = -88.0
+offset_bottom = 155.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_1c0l5")
-theme_override_font_sizes/font_size = 30
-text = "Matriz:"
-horizontal_alignment = 1
+theme_override_font_sizes/font_size = 25
+text = "Código:"
+autowrap_mode = 2
 justification_flags = 35
 
 [node name="ColorRect2" type="ColorRect" parent="Control/TutorialMatriz"]
@@ -1316,9 +1308,9 @@ anchor_top = 0.465
 anchor_right = 0.842
 anchor_bottom = 0.533
 offset_left = -264.92
-offset_top = 222.43
-offset_right = 23.7599
-offset_bottom = 333.166
+offset_top = 191.43
+offset_right = 23.76
+offset_bottom = 441.166
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -1328,10 +1320,20 @@ self_modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 6.0
 offset_top = -5.0
-offset_right = 562.0
-offset_bottom = 372.0
-theme_override_font_sizes/font_size = 25
-text = "A que vai ficar o meu tutorial"
+offset_right = 541.0
+offset_bottom = 333.0
+theme_override_font_sizes/font_size = 20
+text = "# Matriz de notas (3 alunos e 3 provas)
+notas = [
+    [7.5, 8.0, 6.0],  # Notas do Aluno 1
+    [9.0, 8.5, 7.0],  # Notas do Aluno 2
+    [6.0, 5.5, 8.5]   # Notas do Aluno 3
+]
+
+# Exibir todas as notas
+print(\"Notas dos alunos:\")
+for i in range(len(notas)):
+    print(f\"Aluno {i+1}: {notas[i]}\")"
 autowrap_mode = 2
 
 [node name="ColorRect3" type="ColorRect" parent="Control/TutorialMatriz"]
@@ -1388,7 +1390,6 @@ text = "PRÓXIMO"
 flat = true
 
 [node name="TutorialMatrizExec" type="ColorRect" parent="Control"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1429,9 +1430,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 87.0
-offset_top = -128.0
+offset_top = 107.0
 offset_right = -477.0
-offset_bottom = -78.0
+offset_bottom = 157.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_1c0l5")
@@ -1447,10 +1448,10 @@ anchor_left = 0.118
 anchor_top = 0.465
 anchor_right = 0.889
 anchor_bottom = 0.912
-offset_left = 0.0399933
-offset_top = -29.5701
+offset_left = 0.0400009
+offset_top = 200.43
 offset_right = -0.0800171
-offset_bottom = -12.7761
+offset_bottom = -12.776
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -1461,9 +1462,12 @@ layout_mode = 0
 offset_left = 16.0
 offset_top = 9.0
 offset_right = 540.0
-offset_bottom = 584.0
+offset_bottom = 365.0
 theme_override_font_sizes/font_size = 25
-text = "A que vai ficar Minha Execução"
+text = "Notas dos alunos:
+Aluno 1: [7.5, 8.0, 6.0]
+Aluno 2: [9.0, 8.5, 7.0]
+Aluno 3: [6.0, 5.5, 8.5]"
 autowrap_mode = 2
 
 [node name="ColorRect3" type="ColorRect" parent="Control/TutorialMatrizExec"]
@@ -1518,6 +1522,18 @@ theme_override_fonts/font = ExtResource("3_1c0l5")
 theme_override_font_sizes/font_size = 25
 text = "PRÓXIMO"
 flat = true
+
+[node name="Label2" type="Label" parent="Control/TutorialMatrizExec"]
+offset_left = 85.0
+offset_top = 512.0
+offset_right = 667.0
+offset_bottom = 836.0
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "Este exemplo mostrar conceitos básicos de matrizes e como trabalhar com dados tabulares em programação.
+
+As notas dos três alunos são exibidas."
+autowrap_mode = 2
 
 [node name="TutorialAcabado" type="ColorRect" parent="Control"]
 layout_mode = 1
@@ -1616,7 +1632,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_1c0l5")
 theme_override_font_sizes/font_size = 25
-text = "PRATICAR"
+text = "INICIO"
 flat = true
 
 [node name="Correto" type="AudioStreamPlayer" parent="."]
@@ -1633,18 +1649,18 @@ stream = ExtResource("6_myhbj")
 [connection signal="pressed" from="Control/Tela_Informacao/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
 [connection signal="pressed" from="Control/Opcao/VBoxContainer/ColorRect/Button" to="." method="_on_button_praticar_pressed"]
 [connection signal="pressed" from="Control/Opcao/VBoxContainer/ColorRect/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Control/Opcao/VBoxContainer/ColorRect2/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Opcao/VBoxContainer/ColorRect2/Button" to="." method="_on_button_ir_tutorialfor_pressed"]
-[connection signal="pressed" from="Control/TutorialFor/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/Opcao/VBoxContainer/ColorRect2/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/TutorialFor/ColorRect3/Button" to="." method="_on_voltar_tutorial_for_pressed"]
-[connection signal="pressed" from="Control/TutorialFor/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialFor/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
 [connection signal="pressed" from="Control/TutorialFor/ColorRect4/Button" to="." method="_on_proximo_tutorial_exec_pressed"]
-[connection signal="pressed" from="Control/TutorialForExec/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialFor/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
 [connection signal="pressed" from="Control/TutorialForExec/ColorRect3/Button" to="." method="_on_voltar_tutorial_exec_pressed"]
-[connection signal="pressed" from="Control/TutorialForExec/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialForExec/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
 [connection signal="pressed" from="Control/TutorialForExec/ColorRect4/Button" to="." method="_on_proximo_tutorial_for_exec_pressed"]
-[connection signal="pressed" from="Control/TutorialWhile/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialForExec/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
 [connection signal="pressed" from="Control/TutorialWhile/ColorRect3/Button" to="." method="_on_voltar_while_voltar_pressed"]
+[connection signal="pressed" from="Control/TutorialWhile/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
 [connection signal="pressed" from="Control/TutorialWhile/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
 [connection signal="pressed" from="Control/TutorialWhile/ColorRect4/Button" to="." method="_on_proximo_tutorial_while_pressed"]
 [connection signal="pressed" from="Control/TutorialWhileExec/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
