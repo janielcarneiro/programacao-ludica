@@ -10,9 +10,9 @@ config_version=5
 
 [application]
 
-config/name="Programacao-ludica-master"
+config/name="Programacao Ludica"
 run/main_scene="res://scenes/Main.tscn"
-config/features=PackedStringArray("4.2", "Forward Plus")
+config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
 [display]
@@ -23,4 +23,8 @@ window/stretch/mode="canvas_items"
 
 [dotnet]
 
-project/assembly_name="Programacao-ludica-master"
+project/assembly_name="Programacao Ludica"
+
+[rendering]
+
+renderer/rendering_method="mobile"
