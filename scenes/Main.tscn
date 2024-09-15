@@ -352,8 +352,8 @@ Nível 1: Perguntas fáceis
 Nível 2: Perguntas médias
 Nível 3: Perguntas difíceis
 
-Observação: Ao clicar em iniciar, você terá que ir até o fim do jogo.
-Vamos iniciar o jogo?"
+Observação: Ao clicar em iniciar, você terá que escolher entre aprender e iniciar o jogo e ir até o fim das questões.
+Vamos iniciar?"
 horizontal_alignment = 1
 autowrap_mode = 3
 uppercase = true
@@ -386,6 +386,7 @@ text = "INICIAR"
 flat = true
 
 [node name="Jogo" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -539,6 +540,7 @@ theme_override_font_sizes/font_size = 25
 text = "Errado"
 
 [node name="Game_Over" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -583,6 +585,7 @@ theme_override_font_sizes/font_size = 55
 text = "0/0"
 
 [node name="Opcao" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -671,6 +674,7 @@ scale = Vector2(0.72093, 0.651648)
 texture = ExtResource("4_bk04q")
 
 [node name="TutorialFor" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.114
@@ -815,6 +819,7 @@ text = "PRÓXIMO"
 flat = true
 
 [node name="TutorialForExec" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -957,6 +962,7 @@ text = "PRÓXIMO"
 flat = true
 
 [node name="TutorialWhile" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1098,6 +1104,7 @@ text = "PRÓXIMO"
 flat = true
 
 [node name="TutorialWhileExec" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1240,6 +1247,7 @@ text = "PRÓXIMO"
 flat = true
 
 [node name="TutorialMatriz" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1390,6 +1398,7 @@ text = "PRÓXIMO"
 flat = true
 
 [node name="TutorialMatrizExec" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1536,6 +1545,7 @@ As notas dos três alunos são exibidas."
 autowrap_mode = 2
 
 [node name="TutorialAcabado" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_top = -0.055
