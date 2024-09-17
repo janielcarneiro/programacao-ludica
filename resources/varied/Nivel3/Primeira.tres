@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://dnn5kb53or0ux"]
+
+[ext_resource type="Script" path="res://scripts/resourses/question.gd" id="1_vxy6p"]
+
+[resource]
+script = ExtResource("1_vxy6p")
+question_info = "Este código cria uma matriz identidade 4x4?"
+question_script = "matriz = []for i in range(4):    linha = []    for j in range(4):        if i == j:            linha.append(1)        else:            linha.append(0)    matriz.append(linha)for linha in matriz:    print(linha)"
+Nivel = "Nivel: 03"
+Questao = "Questão: 1/3"
+type = 0
+options = Array[String](["Certo", "Errado"])
+correct = "Errado"

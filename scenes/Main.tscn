@@ -540,7 +540,6 @@ theme_override_font_sizes/font_size = 25
 text = "Errado"
 
 [node name="Game_Over" type="ColorRect" parent="Control"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -583,6 +582,36 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_1c0l5")
 theme_override_font_sizes/font_size = 55
 text = "0/0"
+
+[node name="ColorRect4" type="ColorRect" parent="Control/Game_Over"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.925
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 265.0
+offset_top = -168.65
+offset_right = 105.0
+offset_bottom = -206.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.0862745, 0.0392157, 0.384314, 1)
+
+[node name="Button" type="Button" parent="Control/Game_Over/ColorRect4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.78
+anchor_top = -8.441
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 356.0
+offset_top = 506.46
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1c0l5")
+theme_override_font_sizes/font_size = 25
+text = "INICIO"
+flat = true
 
 [node name="Opcao" type="ColorRect" parent="Control"]
 visible = false
@@ -1533,6 +1562,7 @@ text = "PRÓXIMO"
 flat = true
 
 [node name="Label2" type="Label" parent="Control/TutorialMatrizExec"]
+layout_mode = 0
 offset_left = 85.0
 offset_top = 512.0
 offset_right = 667.0
@@ -1657,6 +1687,9 @@ stream = ExtResource("6_myhbj")
 [connection signal="pressed" from="Control/VBoxContainer/ColorRect/VBoxContainer/ColorRect/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/ColorRect/ColorRect3/Button" to="." method="_on_button_nome_pressed"]
 [connection signal="pressed" from="Control/Tela_Informacao/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/Game_Over/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/Game_Over/ColorRect4/Button" to="." method="_on_button_pressed_praticar"]
+[connection signal="pressed" from="Control/Game_Over/ColorRect4/Button" to="." method="_on_button_pressed_reload"]
 [connection signal="pressed" from="Control/Opcao/VBoxContainer/ColorRect/Button" to="." method="_on_button_praticar_pressed"]
 [connection signal="pressed" from="Control/Opcao/VBoxContainer/ColorRect/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Opcao/VBoxContainer/ColorRect2/Button" to="." method="_on_button_ir_tutorialfor_pressed"]
@@ -1671,21 +1704,21 @@ stream = ExtResource("6_myhbj")
 [connection signal="pressed" from="Control/TutorialForExec/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
 [connection signal="pressed" from="Control/TutorialWhile/ColorRect3/Button" to="." method="_on_voltar_while_voltar_pressed"]
 [connection signal="pressed" from="Control/TutorialWhile/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
-[connection signal="pressed" from="Control/TutorialWhile/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
 [connection signal="pressed" from="Control/TutorialWhile/ColorRect4/Button" to="." method="_on_proximo_tutorial_while_pressed"]
+[connection signal="pressed" from="Control/TutorialWhile/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
 [connection signal="pressed" from="Control/TutorialWhileExec/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
 [connection signal="pressed" from="Control/TutorialWhileExec/ColorRect3/Button" to="." method="_on_voltar_while_exec_pressed"]
 [connection signal="pressed" from="Control/TutorialWhileExec/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
 [connection signal="pressed" from="Control/TutorialWhileExec/ColorRect4/Button" to="." method="_on_proximo_tutorial_while_exec_pressed"]
 [connection signal="pressed" from="Control/TutorialMatriz/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
 [connection signal="pressed" from="Control/TutorialMatriz/ColorRect3/Button" to="." method="_on_voltar_matriz_pressed"]
-[connection signal="pressed" from="Control/TutorialMatriz/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
 [connection signal="pressed" from="Control/TutorialMatriz/ColorRect4/Button" to="." method="_on_proximo_matriz_pressed"]
-[connection signal="pressed" from="Control/TutorialMatrizExec/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialMatriz/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
 [connection signal="pressed" from="Control/TutorialMatrizExec/ColorRect3/Button" to="." method="_on_voltar_matriz_exec_pressed"]
 [connection signal="pressed" from="Control/TutorialMatrizExec/ColorRect3/Button" to="." method=" _on_voltar_matriz_exec_pressed"]
-[connection signal="pressed" from="Control/TutorialMatrizExec/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
+[connection signal="pressed" from="Control/TutorialMatrizExec/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
 [connection signal="pressed" from="Control/TutorialMatrizExec/ColorRect4/Button" to="." method="_on_proximo_matriz_exec_pressed"]
+[connection signal="pressed" from="Control/TutorialMatrizExec/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
 [connection signal="pressed" from="Control/TutorialAcabado/ColorRect3/Button" to="." method="_on_button_iniciar_jogo_pressed"]
 [connection signal="pressed" from="Control/TutorialAcabado/ColorRect4/Button" to="." method="_on_button_iniciar_jogo_pressed"]
 [connection signal="pressed" from="Control/TutorialAcabado/ColorRect4/Button" to="." method="_on_button_pressed_praticar"]

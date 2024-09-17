@@ -232,3 +232,8 @@ func _on_button_pressed_praticar():
 	TutorialAcabado.hide()
 	Jogo.show()
 	pass # Replace with function body.
+
+
+func _on_button_pressed_reload():
+	get_tree().reload_current_scene()
+	pass # Replace with function body.

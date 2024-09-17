@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://cl64y7jpxo3n2"]
+
+[ext_resource type="Script" path="res://scripts/resourses/question.gd" id="1_7ec6f"]
+
+[resource]
+script = ExtResource("1_7ec6f")
+question_info = "Este código imprime os números de 1 a 5?"
+question_script = "i = 1while i <= 5:    print(i)    i += 1"
+Nivel = "Nivel: 03"
+Questao = "Questão: 2/3"
+type = 0
+options = Array[String](["Certo", "Errado"])
+correct = "Certo"

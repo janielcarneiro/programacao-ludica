@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://cd7wnhcc8vu21"]
+
+[ext_resource type="Script" path="res://scripts/resourses/question.gd" id="1_waj1h"]
+
+[resource]
+script = ExtResource("1_waj1h")
+question_info = "Este código cria uma matriz 3x3 onde cada elemento é um número consecutivo começando do 1?"
+question_script = "matriz = []contador = 1for i in range(3):    linha = []    for j in range(3):        linha.append(contador)        contador += 1    matriz.append(linha)for linha in matriz:    print(linha)"
+Nivel = "Nivel: 03"
+Questao = "Questão: 3/3"
+type = 0
+options = Array[String](["Certo", "Errado"])
+correct = "Certo"
