@@ -21,7 +21,10 @@ O jogo é composto por dois modos de jogo, sendo eles: "Modo Aprender", em que t
 ![Capturar4](https://github.com/user-attachments/assets/97efd02d-d38c-458c-93a8-9d9812d9094c)
 
 
-Nível 1:![Capturar6](https://github.com/user-attachments/assets/ff5da2a5-d99a-4533-84ab-b9ae8893ceb1)
+O jogo é composto por 3 níveis, cada nível é composto 3 desafios.  
+Exemplo de desafio:
+
+![Capturar6](https://github.com/user-attachments/assets/ff5da2a5-d99a-4533-84ab-b9ae8893ceb1)
 
 
 
