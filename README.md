@@ -5,7 +5,7 @@ Este jogo tem como objetivo transmitir conhecimento e ensinar estruturas de repe
 ##Tela inicial:
 ![Tela inicial](https://github.com/user-attachments/assets/e7d0d591-7e1e-479f-bd36-792ad5ea6dc5)
 
-
+O jogo é composto por dois modos de jogo, sendo eles: "Modo Aprender", em que tem tutoriais sobre as estruturas de repetição, e o modo "Praticar" em que o jogador pode praticar os conhecimentos adquiridos.
 
 ##Modos de jogo:
 ![Modos de jogo](https://github.com/user-attachments/assets/26486386-ab56-4cb0-bc4c-5ae1de393d8e)
