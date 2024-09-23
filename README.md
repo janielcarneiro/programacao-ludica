@@ -23,6 +23,7 @@ O jogo é composto por dois modos de jogo, sendo eles: modo "**Aprender**", em q
 
 
 O jogo é composto por 3 níveis, cada nível é composto 3 desafios. Nos desafios o jogador recebe uma determinada assertiva sobre o assunto e deve marcar como **Certa** ou **Errada**.
+
 **#Exemplo de desafio:**
 
 ![Capturar6](https://github.com/user-attachments/assets/ff5da2a5-d99a-4533-84ab-b9ae8893ceb1)
