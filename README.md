@@ -1,8 +1,8 @@
 O Jogo "Programação Lúdica" foi desenvolvido como um trabalho para a disciplina de Introdução à Programação do Curso Técnico em Informática do IFCE campus Tianguá.
 
 Este jogo tem como objetivo transmitir conhecimento e ensinar estruturas de repetição em Python de uma forma fácil e divertida. Nos desafios do game são utilizadas as estruturas de repetição “for” e “while”. Ele contém três fases que começam com desafios fáceis e avançam até chegar à parte mais complexa das estruturas de repetição, que é o preenchimento de matrizes.
+Tela inicial:
 
-##Tela inicial:
 ![Tela inicial](https://github.com/user-attachments/assets/e7d0d591-7e1e-479f-bd36-792ad5ea6dc5)
 
 O jogo é composto por dois modos de jogo, sendo eles: "Modo Aprender", em que tem tutoriais sobre as estruturas de repetição, e o modo "Praticar" em que o jogador pode praticar os conhecimentos adquiridos.
