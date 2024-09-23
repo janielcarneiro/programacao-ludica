@@ -14,7 +14,8 @@ O jogo é composto por dois modos de jogo, sendo eles: modo "**Aprender**", em q
 
 **#Modo Aprender:**
 
-![Capturar7](https://github.com/user-attachments/assets/8b13bde4-20a7-4686-93b3-8500a468ae4f)
+![Capturar8](https://github.com/user-attachments/assets/310248c2-a17b-4b04-89e8-98b0bf78592e)
+
 
 **#Modo Praticar:**
 
