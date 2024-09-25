@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource("1_25y4j")
-question_info = "Este código imprime os números de 1 a 5?"
-question_script = "i = 1while i <= 5:    print(i)    i += 1"
+question_info = "Problema: : Este código recebe valores e adiciona dentro do vetor? "
+question_script = "vetor = []tamanho_maximo = 5while len(vetor) < tamanho_maximo:    valor = int(input(f\"Digite o valor     para a posição {len(vetor) + 1}: \"))    vetor.append(valor)"
 Nivel = "Nivel: 02"
 Questao = "Questão: 2/3"
 type = 0

@@ -4,10 +4,10 @@
 
 [resource]
 script = ExtResource("1_mqage")
-question_info = "Este código imprime os números de 1 a 5?"
-question_script = "i = 1while i <= 5:    print(i)    i += 1"
+question_info = "Problema: : Este código Soma dois vetores? "
+question_script = "def soma_vetores(vetor1, vetor2):    if len(vetor1) != len(vetor2):        raise ValueError(\"Os vetores devem ter o mesmo tamanho.\")    return [vetor1[i] + vetor2[] for i in range(len(vetor1))]"
 Nivel = "Nivel: 02"
 Questao = "Questão: 3/3"
 type = 0
 options = Array[String](["Certo", "Errado"])
-correct = "Certo"
+correct = "Errado"
